@@ -3,7 +3,7 @@ import React from 'react';
 const Post = ({ signedIn, post }) => {
 
   console.log('Rendering Post component');
-  // console.log(signedIn);
+  console.log(signedIn);
 
   return (
     <div className="">
@@ -19,10 +19,8 @@ const Post = ({ signedIn, post }) => {
   );
 };
 
-// const customComparator = (prevProps, nextProps) => {
-//   return nextProps.post === prevProps.post;
-// };
+const customComparator = (prevProps, nextProps) => {
+  return nextProps.post === prevProps.post
+}
 
-
-export default React.memo(Post);
-// export default React.memo(Post, customComparator);
+export default React.memo(Post, customComparator);

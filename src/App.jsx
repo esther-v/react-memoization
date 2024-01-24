@@ -10,7 +10,7 @@ function App() {
   return (
     <main>
       <nav className="navbar">
-        <button className="btn btn-danger" onClick={handleClick}>Sign Out</button>
+        <button className="btn btn-danger" onClick={handleClick}>{signedIn ? "Sign Out" : "Sign In"}</button>
       </nav>
       <Blog signedIn={signedIn} setSignedIn={setSignedIn} />
     </main>
