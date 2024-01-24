@@ -23,6 +23,6 @@ const Post = ({ signedIn, post }) => {
 //   return nextProps.post === prevProps.post;
 // };
 
-export default Post;
-// export default React.memo(Post);
+
+export default React.memo(Post);
 // export default React.memo(Post, customComparator);
