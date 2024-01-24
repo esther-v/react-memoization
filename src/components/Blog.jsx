@@ -14,8 +14,7 @@ const Blog = ({ signedIn }) => {
     setUpdatedPosts(posts);
   };
 
-  const sortedPosts = sortPosts(updatedPosts);
-  // const sortedPosts = useMemo(() => sortPosts(updatedPosts), [updatedPosts]);
+  const sortedPosts = useMemo(() => sortPosts(updatedPosts), [updatedPosts])
 
   useEffect(
     () => {
