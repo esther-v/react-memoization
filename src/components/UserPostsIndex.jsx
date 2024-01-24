@@ -5,21 +5,19 @@ import UserPostsList from "./UserPostsList";
 const UserPostsIndex = ({ signedIn }) => {
   const [userPosts, setUserPosts] = useState([]);
 
-  const deletePost = e => {
-  // const deletePost = useCallback(e => {
+  const deletePost = useCallback(e => {
     const { postId } = e.currentTarget.dataset;
     const remainingPosts = userPosts.filter(post => post.id !== parseInt(postId));
     setUserPosts(remainingPosts);
-  };
-  // }, [userPosts]);
+  }, [userPosts]) 
 
   useEffect(() => {
     const posts = fetchUserPosts();
     setUserPosts(posts);
   }, []);
 
-  // console.log(userPosts)
-  // console.log('Rendering UserPostsIndex component');
+  console.log(userPosts)
+  console.log('Rendering UserPostsIndex component');
 
   return (
     <div className="my-1 p-2 box">

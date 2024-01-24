@@ -3,7 +3,7 @@ import UserPost from './UserPost';
 
 const UserPostsList = ({ userPosts, deletePost }) => {
 
-  // console.log('Rendering UserPostsList component');
+  console.log('Rendering UserPostsList component');
 
   return (
     (
